@@ -19,6 +19,16 @@ body {
 
 #my-container .form-control {
     font-weight: bold;
+    background-color: white !important;
+    border: 2px solid rgb(233, 229, 229);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    transition: none;
 }
 
 #my-container .form-control::placeholder {
@@ -30,10 +40,14 @@ body {
     min-height: 7rem;
 }
 
-
 #my-container .form-control:focus {
     box-shadow: none;
-    border: 1px solid rgb(160, 128, 250);
+    border: 2px solid rgb(160, 128, 250);
+}
+
+#my-container #inputs span {
+    color: rgb(234, 61, 61);
+    padding: 10px 0 0 2px;
 }
 
 #my-container #arrow-container {
