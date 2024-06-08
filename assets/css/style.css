@@ -26,19 +26,23 @@ body {
     color: gray;
 }
 
+#my-container #inputs {
+    min-height: 7rem;
+}
+
 
 #my-container .form-control:focus {
     box-shadow: none;
     border: 1px solid rgb(160, 128, 250);
 }
 
-#arrow-container {
+#my-container #arrow-container {
     display: flex;
     justify-content: right;
     align-items: center;
 }
 
-#arrow-container button{
+#my-container #arrow-container button{
     background-color: rgb(160, 128, 250);
     padding: 0.5rem;
     border-radius: 50%;
@@ -47,38 +51,38 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
-#arrow-container button:hover {
+#my-container #arrow-container button:hover {
     background-color: black;
 }
 
-.line {
+#my-container #arrow-container .line {
     background-color: gray;
     min-width: 90%;
     min-height: 1px;
 }
 
 @media(max-width: 768px) { 
-    .line {
-        margin: 2rem 0;
+    #my-container #arrow-container .line {
+        margin: 2.5rem 0;
         background-color: gray;
         min-width: 100%;
         min-height: 1px;
         position: relative;
     }
 
-    #arrow-container button {
+    #my-container #arrow-container button {
         position: absolute;
         right: calc(50% - 2rem);
     }
 }
 
-#results p {
+#my-container #results p {
     font-size: 3.5rem;
     font-weight: bold;
     margin: 0;
 }
 
-#results p span {
+#my-container #results p span {
     color: rgb(160, 128, 250);
     font-size: 3rem;
 }
