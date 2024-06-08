@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(232, 232, 232);
+    min-height: 100vh;
+    display: grid;
+    place-content: center center;
+}
+
+#my-container {
+    background-color: white;
+    border-radius: 12px 12px 25% 12px;
+}
+
+#my-container h5 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+#my-container .form-control {
+    font-weight: bold;
+}
+
+#my-container .form-control::placeholder {
+    font-weight: bold;
+    color: gray;
+}
+
+
+#my-container .form-control:focus {
+    box-shadow: none;
+    border: 1px solid rgb(160, 128, 250);
+}
+
+#arrow-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#arrow-container button{
+    background-color: rgb(160, 128, 250);
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    transition: all 0.4s ease-in-out;
+}
+
+#arrow-container button:hover {
+    background-color: black;
+}
+
+.line {
+    background-color: gray;
+    min-width: 90%;
+    min-height: 1px;
+}
+
+@media(max-width: 768px) { 
+    .line {
+        margin: 2rem 0;
+        background-color: gray;
+        min-width: 100%;
+        min-height: 1px;
+        position: relative;
+    }
+
+    #arrow-container button {
+        position: absolute;
+        right: calc(50% - 2rem);
+    }
+}
+
+#results p {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#results p span {
+    color: rgb(160, 128, 250);
+}
