@@ -48,9 +48,14 @@ input:-webkit-autofill:active {
     border: 2px solid rgb(160, 128, 250);
 }
 
+.form-control::-webkit-inner-spin-button {
+    display: none;
+}
+
 #my-container #inputs span {
     color: rgb(234, 61, 61);
-    padding: 10px 0 0 2px;
+    padding: 10px 0 0 0;
+    font-size: 0.75em;
 }
 
 #my-container #arrow-container {
