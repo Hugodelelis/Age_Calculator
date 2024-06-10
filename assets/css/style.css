@@ -109,6 +109,7 @@ input:-webkit-autofill:active {
     }
 
     #my-container #inputs span {
+        text-align: center;
         font-size: 0.65em;
     }
 
