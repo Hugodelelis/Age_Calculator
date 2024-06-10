@@ -34,7 +34,7 @@ const results = () => {
     currentMonth > month ? monthResult = (month - currentMonth) * (-1) : monthResult = (month - currentMonth)
     document.querySelector('#result-months').innerHTML = monthResult  
 
-    currentDay < day ? dayResult = (day - currentDay) : dayResult = (day - currentDay) + totDay
+    currentDay <= day ? dayResult = (day - currentDay) : dayResult = (day - currentDay) + totDay
     document.querySelector('#result-days').innerHTML = addZero(dayResult) 
 
     if (year == currentYear) document.querySelector('#result-years').innerHTML = addZero(yearResult)
