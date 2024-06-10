@@ -83,6 +83,17 @@ input:-webkit-autofill:active {
     min-height: 1px;
 }
 
+#my-container #results p {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+#my-container #results p span {
+    color: rgb(160, 128, 250);
+    font-size: 3rem;
+}
+
 @media(max-width: 768px) { 
     #my-container #arrow-container .line {
         margin: 2.5rem 0;
@@ -102,17 +113,7 @@ input:-webkit-autofill:active {
     }
 
     #my-container #results p {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     }
 }
 
-#my-container #results p {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-}
-
-#my-container #results p span {
-    color: rgb(160, 128, 250);
-    font-size: 3rem;
-}
