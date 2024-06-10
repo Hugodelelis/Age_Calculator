@@ -100,6 +100,10 @@ input:-webkit-autofill:active {
     #my-container #inputs span {
         font-size: 0.65em;
     }
+
+    #my-container #results p {
+    font-size: 2.5rem;
+    }
 }
 
 #my-container #results p {
