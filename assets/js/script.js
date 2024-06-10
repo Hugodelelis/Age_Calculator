@@ -16,14 +16,25 @@ const results = () => {
     let yearResult 
     let monthResult 
     let dayResult 
+    let totDay = 0
+
+    if (currentMonth == 1 || currentMonth == 3 || currentMonth == 5 || currentMonth == 7 || currentMonth == 8 || currentMonth == 10 || currentMonth == 12) {
+        totDay = 31
+    } else if (currentMonth == 2) {
+        totDay = 28
+    } else {
+        totDay = 30
+    }
     
+    console.log(totDay)
+    console.log(currentMonth)
     currentYear > year ? yearResult = (year - currentYear) * (-1) : yearResult = (year - currentYear)
     document.querySelector('#result-years').innerHTML = addZero(yearResult-1)
 
     currentMonth > month ? monthResult = (month - currentMonth) * (-1) : monthResult = (month - currentMonth)
     document.querySelector('#result-months').innerHTML = monthResult  
 
-    currentDay > day ? dayResult = (day - currentDay) * (-1) : dayResult = ((day + currentDay) - day)
+    currentDay < day ? dayResult = (day - currentDay) : dayResult = (day - currentDay) + totDay
     document.querySelector('#result-days').innerHTML = addZero(dayResult) 
 
     if (year == currentYear) document.querySelector('#result-years').innerHTML = addZero(yearResult)
@@ -47,41 +58,50 @@ const verify = () => {
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--'
+        return
     } else if (1 > day || day > 31) {
         spanDay.innerHTML = 'Dia inválido'
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--' 
         return
-    } 
+    } else {
+        spanDay.innerHTML = ''
+    }
 
     if (!month) {
         spanMonth.innerHTML = 'Preencha o campo'
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--'
+        return
     } else if (1 > month || month > 12) {
         spanMonth.innerHTML = 'Més inválido'
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--'
         return
-    } 
+    } else {
+        spanMonth.innerHTML = ''
+    }
 
     if (!year) {
         spanYear.innerHTML = 'Preencha o campo'
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--'
+        return
     } else if (1600 > year || year > currentYear) {
         spanYear.innerHTML = 'Ano inválido'
         document.querySelector('#result-days').innerHTML = '--'
         document.querySelector('#result-months').innerHTML = '--'
         document.querySelector('#result-years').innerHTML = '--'
         return
+    } else {
+        spanYear.innerHTML = ''
     }
 
-    if (day && month && year && 1 <= day || day >= 31 && 1 <= month || month >= 12 && 1600 <= year || year >= currentYear) {
+    if (day && month && year && 1 <= day || day <= 31 && 1 <= month || month <= 12 && 1600 <= year || year >= currentYear) {
         spanDay.innerHTML = ''
         spanMonth.innerHTML = ''
         spanYear.innerHTML = ''
