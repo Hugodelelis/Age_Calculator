@@ -96,6 +96,10 @@ input:-webkit-autofill:active {
         position: absolute;
         right: calc(50% - 2rem);
     }
+
+    #my-container #inputs span {
+        font-size: 0.65em;
+    }
 }
 
 #my-container #results p {
