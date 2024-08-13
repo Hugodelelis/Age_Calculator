@@ -94,7 +94,12 @@ input:-webkit-autofill:active {
     font-size: 3rem;
 }
 
-@media(max-width: 768px) { 
+.error-text {
+    color: red;
+    font-size: 0.72em;
+}
+
+@media(max-width: 960px) { 
     #my-container #arrow-container .line {
         margin: 2.5rem 0;
         background-color: gray;
@@ -108,7 +113,7 @@ input:-webkit-autofill:active {
         right: calc(50% - 2rem);
     }
 
-    #my-container #inputs span {
+    .error-text {
         font-size: 0.65em;
     }
 
