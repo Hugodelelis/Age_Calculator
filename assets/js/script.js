@@ -74,8 +74,6 @@ class Validation {
         return valid
     }
 
-
-
     setError(campo, msg) {
         const div = document.createElement('div');
         div.innerHTML = msg;
