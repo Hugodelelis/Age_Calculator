@@ -27,12 +27,37 @@ class Validation {
         const day = document.querySelector('#day')
         let valid = true
 
+        const months = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ];
+
+        let countDays = 0
+
+        if(months[this.date.getMonth()] === 'Abril' || 
+        months[this.date.getMonth()] === 'Junho' || 
+        months[this.date.getMonth()] === 'Setembro' || 
+        months[this.date.getMonth()] === 'Novembro'
+        ) countDays = 30
+
+        if (
+            months[this.date.getMonth()] === 'Janeiro' ||
+            months[this.date.getMonth()] === 'Março' ||
+            months[this.date.getMonth()] === 'Maio' ||
+            months[this.date.getMonth()] === 'Julho' ||
+            months[this.date.getMonth()] === 'Agosto' ||
+            months[this.date.getMonth()] === 'Outubro' ||
+            months[this.date.getMonth()] === 'Dezembro'
+        ) countDays = 31;
+
+        if (months[this.date.getMonth()] === 'Fevereiro') countDays = 29;
+
         if(!day.value) {
             this.setError(day, 'Preencha o campo')
             valid = false
         }
 
-        if(day.value.length > 2) {
+        if(day.value.length > 2 || day.value > countDays) {
             this.setError(day, 'Dia inválido')
             valid = false
         }
@@ -49,7 +74,7 @@ class Validation {
             valid = false
         }
 
-        if(month.value.length > 2) {
+        if(month.value.length > 2 || month.value > 12) {
             this.setError(month, 'Més inválido')
             valid = false
         }
@@ -66,7 +91,7 @@ class Validation {
             valid = false
         }
 
-        if(year.value.length > 4) {
+        if(year.value.length > 4 || year.value > this.date.getFullYear()) {
             this.setError(year, 'Ano inválido')
             valid = false
         }

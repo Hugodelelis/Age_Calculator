@@ -64,7 +64,7 @@ input:-webkit-autofill:active {
     align-items: center;
 }
 
-#my-container #arrow-container button{
+#my-container #arrow-container button {
     background-color: rgb(160, 128, 250);
     padding: 0.5rem;
     border-radius: 50%;
@@ -97,6 +97,7 @@ input:-webkit-autofill:active {
 .error-text {
     color: red;
     font-size: 0.72em;
+    text-align: center;
 }
 
 @media(max-width: 960px) { 
@@ -115,7 +116,6 @@ input:-webkit-autofill:active {
 
     .error-text {
         font-size: 0.65em;
-        text-align: center;
     }
 
     #my-container #results p {
