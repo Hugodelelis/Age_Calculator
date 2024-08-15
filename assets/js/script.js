@@ -21,6 +21,10 @@ class Validation {
         const isDayValid = this.isDayValid()
         const isMonthValid = this.isMonthValid()
         const isYearValid = this.isYearValid()
+
+        if(isDayValid && isMonthValid && isDayValid) {
+            const calculate = new Calculate()
+        }
     }
 
     isDayValid() {
@@ -51,7 +55,6 @@ class Validation {
         ) countDays = 31;
 
         if (months[this.date.getMonth()] === 'Fevereiro') countDays = 29;
-
         if(!day.value) {
             this.setError(day, 'Preencha o campo')
             valid = false
