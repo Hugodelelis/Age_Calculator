@@ -21,7 +21,8 @@ class Calculate {
 
         let monthResult = (12 - monthValue) + this.date.getMonth()
 
-        if(dayValue < this.date.getDate()) monthResult += 1
+        if(dayValue <= this.date.getDate()) monthResult += 1
+        if(monthResult === 12) monthResult = 0
 
         this.month.innerHTML = this.format(monthResult)
 
