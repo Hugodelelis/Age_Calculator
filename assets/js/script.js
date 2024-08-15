@@ -29,6 +29,7 @@ class Validation {
 
     isDayValid() {
         const day = document.querySelector('#day')
+        const month = document.querySelector('#month')
         let valid = true
 
         const months = [
@@ -38,23 +39,23 @@ class Validation {
 
         let countDays = 0
 
-        if(months[this.date.getMonth()] === 'Abril' || 
-        months[this.date.getMonth()] === 'Junho' || 
-        months[this.date.getMonth()] === 'Setembro' || 
-        months[this.date.getMonth()] === 'Novembro'
+        if(months[month.value - 1] === 'Abril' || 
+        months[month.value - 1] === 'Junho' || 
+        months[month.value - 1] === 'Setembro' || 
+        months[month.value - 1] === 'Novembro'
         ) countDays = 30
 
         if (
-            months[this.date.getMonth()] === 'Janeiro' ||
-            months[this.date.getMonth()] === 'Março' ||
-            months[this.date.getMonth()] === 'Maio' ||
-            months[this.date.getMonth()] === 'Julho' ||
-            months[this.date.getMonth()] === 'Agosto' ||
-            months[this.date.getMonth()] === 'Outubro' ||
-            months[this.date.getMonth()] === 'Dezembro'
+            months[month.value - 1] === 'Janeiro' ||
+            months[month.value - 1] === 'Março' ||
+            months[month.value - 1] === 'Maio' ||
+            months[month.value - 1] === 'Julho' ||
+            months[month.value - 1] === 'Agosto' ||
+            months[month.value - 1] === 'Outubro' ||
+            months[month.value - 1] === 'Dezembro'
         ) countDays = 31;
 
-        if (months[this.date.getMonth()] === 'Fevereiro') countDays = 29;
+        if (months[month.value - 1] === 'Fevereiro') countDays = 29;
         if(!day.value) {
             this.setError(day, 'Preencha o campo')
             valid = false
