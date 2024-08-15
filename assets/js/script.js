@@ -78,7 +78,7 @@ class Validation {
         }
 
         if(month.value.length > 2 || month.value > 12) {
-            this.setError(month, 'Més inválido')
+            this.setError(month, 'Mês inválido')
             valid = false
         }
 
