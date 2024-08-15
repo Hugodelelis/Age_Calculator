@@ -60,7 +60,7 @@ class Validation {
             valid = false
         }
 
-        if(day.value.length > 2 || day.value > countDays) {
+        if(day.value.length > 2 || day.value > countDays || day.value <= 0) {
             this.setError(day, 'Dia inválido')
             valid = false
         }
@@ -77,7 +77,7 @@ class Validation {
             valid = false
         }
 
-        if(month.value.length > 2 || month.value > 12) {
+        if(month.value.length > 2 || month.value > 12 || month.value <= 0) {
             this.setError(month, 'Mês inválido')
             valid = false
         }
@@ -94,7 +94,7 @@ class Validation {
             valid = false
         }
 
-        if(year.value.length > 4 || year.value > this.date.getFullYear()) {
+        if(year.value.length > 4 || year.value > this.date.getFullYear() || year.value <= 1200 ) {
             this.setError(year, 'Ano inválido')
             valid = false
         }
