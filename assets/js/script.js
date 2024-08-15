@@ -22,7 +22,7 @@ class Validation {
         const isMonthValid = this.isMonthValid()
         const isYearValid = this.isYearValid()
 
-        if(isDayValid && isMonthValid && isDayValid) {
+        if(isDayValid && isMonthValid && isYearValid) {
             const calculate = new Calculate()
         }
     }
