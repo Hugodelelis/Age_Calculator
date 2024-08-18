@@ -37,13 +37,7 @@ class Validation {
             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
         ];
 
-        let countDays = 0
-
-        if(months[month.value - 1] === 'Abril' || 
-        months[month.value - 1] === 'Junho' || 
-        months[month.value - 1] === 'Setembro' || 
-        months[month.value - 1] === 'Novembro'
-        ) countDays = 30
+        let countDays = 30
 
         if (
             months[month.value - 1] === 'Janeiro' ||
@@ -65,7 +59,7 @@ class Validation {
             this.setError(day, 'Dia inválido')
             valid = false
         }
-
+        
         return valid
     }
 
