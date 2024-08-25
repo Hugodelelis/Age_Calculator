@@ -1,4 +1,4 @@
-class Calculate {
+export default class Calculate {
     constructor() {
         this.day = document.querySelector('#result-days');
         this.month = document.querySelector('#result-months');
@@ -60,7 +60,6 @@ class Calculate {
 
     format(value) {
         value < 10 ? value = `0${value}` : value
-
         return value
     }
 }
