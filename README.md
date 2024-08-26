@@ -38,7 +38,7 @@ Follow these steps to install and set up the project locally:
 
 After installation, follow these instructions to use the project:
 
-2. Start webpack:
+1. Start webpack:
     ```bash
     npm run dev
     ```
