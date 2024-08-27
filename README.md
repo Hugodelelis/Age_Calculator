@@ -3,7 +3,7 @@
 
 ## 📖 Overview
 
-**Age calculator** is age calculator provides a simple and accurate way to determine a person's age based on their date of birth. The project is ideal for applications requiring age calculations, such as registration forms, user profiles, and more.
+**** is age calculator provides a simple and accurate way to determine a person's age based on their date of birth. The project is ideal for applications requiring age calculations, such as registration forms, user profiles, and more.
 ## 📸 Image(s)
 ![image](https://github.com/user-attachments/assets/546daefc-d9d8-4126-9e9a-a832fc271983)
 ![image](https://github.com/user-attachments/assets/eab7dd15-a74d-4f7b-8b8d-930435719ef3)
